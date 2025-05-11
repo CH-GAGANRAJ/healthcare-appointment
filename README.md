@@ -13,7 +13,7 @@ Administrative controls for user management
 
 Secure authentication and session management
 The application follows MVC architecture with clear separation between data models, business logic, and presentation layers, making it maintainable and scalable.
-Tech Stack
+# Tech Stack
 ## Backend
 Technology	      Purpose                   Version
 Python	          Core programming language	  3.8+
