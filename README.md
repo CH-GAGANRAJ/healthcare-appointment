@@ -13,17 +13,8 @@ Administrative controls for user management
 
 Secure authentication and session management
 The application follows MVC architecture with clear separation between data models, business logic, and presentation layers, making it maintainable and scalable.
-# Tech Stack
-## Backend
-Technology	    |  Purpose                   | Version
-Python	        | Core programming language	 | 3.8+
-Flask	          |  Web framework	           | 2.0+
-Flask-SQLAlchemy| ORM for database operations| 2.5+
-## Database
-Technology	 | Purpose
-SQLite	     | Relational database (development)
-SQLAlchemy	 | Database ORM and migrations
-## Frontend
-Technology	 | Purpose	
-HTML5	       | Page structure	
-CSS3	       | Styling	
+## Tech Stack
+### Backend: Python, Flask, SQLAlchemy
+### Database: SQLite
+### Frontend: HTML5, CSS3
+### Tools: Git, Flask 
