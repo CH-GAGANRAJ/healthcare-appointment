@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Panel{% endblock %}
+
+{% block content %}
+    <h1>Admin Panel</h1>
+<!-- Inside your admin.html template -->
+<a href="{{ url_for('add_doctor') }}" class="btn btn-success mb-3">
+    + Add New Doctor
+</a>
+    <h2>Users</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+        </tr>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.role }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <h1>Welcome, {{ user.name }}!</h1>
+
+    <h2>Your Appointments</h2>
+    {% if appointments %}
+        <table>
+            <tr>
+                <th>ID</th>
+                {% if user.role == 'patient' %}<th>Doctor</th>{% endif %}
+                {% if user.role == 'doctor' %}<th>Patient</th>{% endif %}
+                <th>Date</th>
+                <th>Time</th>
+                <th>Reason</th>
+                <th>Status</th>
+            </tr>
+            {% for app in appointments %}
+                <tr>
+                    <td>{{ app.id }}</td>
+                    {% if user.role == 'patient' %}
+                        <td>{{ app.doctor.name }}</td>
+                    {% endif %}
+                    {% if user.role == 'doctor' %}
+                        <td>{{ app.patient.name }}</td>
+                    {% endif %}
+                    <td>{{ app.date }}</td>
+                    <td>{{ app.time }}</td>
+                    <td>{{ app.reason }}</td>
+                    <td>{{ app.status }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No appointments found.</p>
+    {% endif %}
+{% endblock %}

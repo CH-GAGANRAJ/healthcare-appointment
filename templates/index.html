@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Healthcare Booking System</h1>
+    <p>Book appointments with your doctors easily and quickly.</p>
+
+    {% if 'user_id' not in session %}
+        <div class="cta-buttons">
+            <a href="{{ url_for('login') }}" class="button">Login</a>
+            <a href="{{ url_for('register') }}" class="button">Register</a>
+        </div>
+    {% endif %}
+{% endblock %}

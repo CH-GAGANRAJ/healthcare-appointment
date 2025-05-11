@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Healthcare Booking - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="{{ url_for('home') }}">Healthcare Booking</a>
+            <div class="nav-links">
+                {% if 'user_id' in session %}
+                    <a href="{{ url_for('dashboard') }}">Dashboard</a>
+                    {% if session['role'] == 'patient' %}
+                        <a href="{{ url_for('book_appointment') }}">Book Appointment</a>
+                    {% elif session['role'] == 'admin' %}
+                        <a href="{{ url_for('admin_panel') }}">Admin Panel</a>
+                    {% endif %}
+                    <a href="{{ url_for('logout') }}">Logout</a>
+                {% else %}
+                    <a href="{{ url_for('login') }}">Login</a>
+                    <a href="{{ url_for('register') }}">Register</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
