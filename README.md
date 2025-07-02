@@ -17,4 +17,14 @@ The application follows MVC architecture with clear separation between data mode
 ### Backend: Python, Flask, SQLAlchemy
 ### Database: SQLite
 ### Frontend: HTML5, CSS3
-### Tools: Git, Flask 
+### Tools: Git, Flask
+## working pics
+![Screenshot 2025-07-02 202227](https://github.com/user-attachments/assets/e7b1e0c6-bb82-4933-a935-07a201b8b4a5)
+![Screenshot 2025-07-02 201835](https://github.com/user-attachments/assets/d0967637-9292-4464-a0cf-95e2182e5cf5)
+![Screenshot 2025-07-02 201922](https://github.com/user-attachments/assets/bad44883-f2a7-47f7-86c1-1c1b7369b6e5)
+![Screenshot 2025-07-02 202122](https://github.com/user-attachments/assets/b11a4319-d2ca-45b3-b70c-e83d87d6a86a)
+![Screenshot 2025-07-02 202136](https://github.com/user-attachments/assets/ec2c955a-fa24-4187-8689-eb886f5db6a7)
+
+
+
+
